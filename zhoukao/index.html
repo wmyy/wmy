@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重</title>
+</head>
+<body>
+	<script>
+		//方法1
+		function array(arr){
+			var n=[]; 
+			for(var i=0;i<arr.length;i++){
+				if(n.indexOf(arr[i])==-1){
+					n.push(arr[i])
+				}
+			} 
+			return n 
+			
+		}
+		console.log(array([1,2,3,4,2,4,6,8])) 
+		//方法2
+		function array2(arr){
+			var a=[],b=[];
+			for(var i=0;i<arr.length;i++){
+				if(!a[arr[i]]){
+					a[arr[i]]=1;
+					b.push(arr[i]);
+				}
+			}
+			return b
+		} 
+		console.log(array2([2,2,4,66,4,7,99,2]))
+	</script>
+</body>
+</html>
